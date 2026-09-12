@@ -48,7 +48,7 @@ function App() {
     formData.append('audio', file)
 
     try {
-      const response = await fetch('http://localhost:5000/upload', {
+      const response = await fetch('https://audioforge-hqbk.onrender.com/upload', {
         method: 'POST',
         body: formData
       })
@@ -74,7 +74,7 @@ function App() {
     setError(null)
 
     try {
-      const response = await fetch('http://localhost:5000/convert', {
+      const response = await fetch('https://audioforge-hqbk.onrender.com/convert', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
